@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap");
+
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
+  background: var(--shade-2);
 }
 * {
   margin: 0;
@@ -18,104 +20,136 @@ body {
 }
 
 :root {
-  --shade-0: #0d263b;
+  --shade-0: #5a5881;
   --shade-1: #ffffff;
-  --shade-2: #f6f8f9;
-  --shade-3: #f5f7fc;
-  --shade-4: #696969;
-  --shade-5: #2f2d51;
-  --shade-6: #282f34;
-  --primary: #0061df;
-  --green: #006766;
-  --yellow: #ffbc01;
+  --shade-2: linear-gradient(270.26deg, #f7faff 1.56%, #d3e0ff 99.74%);
+  --shade-3: #e6f3fa;
+  --shade-4: #e5eaf1;
+  --shade-5: #a3aed0;
+  --shade-6: #2b3674;
+  --grey: #a3aed0;
+  --primary1: #42bcfb;
+  --primary2: #0183c6;
+  --primary3: #42bcfb;
+  --violet1: #9747ff;
+  --violet2: #707EAE;
+  --yellow: #ffbc01;  
   --yellow1: #ede606;
+  --green: #05CD99;
+  --red: #E93A3A;
 
   /* ============  FONT SIZE  =============== */
-  
-  --size13: 13px;
+  --size10: 10px;
+  --size12: 12px;
+  --size14: 14px;
   --size16: 16px;
   --size18: 18px;
-  --size25: 25px;
-  --size30: 30px;
+  --size22: 22px;
+  --size24: 24px;
+  --size34: 34px;
   --size60: 60px;
 
+  /* ========== ICONS ============= */
+    --icon-w18: 18px;
+    --icon-w14: 16px;
+    --icon-w12: 14px;
+    --icon-w20: 22px;
+    --icon-w25: 25px;
+    --card-img: 283px;
   /* ========== FONT FAMILY ============= */
   /* --family: "Montserrat", sans-serif; */
-  --family: "Montserrat", sans-serif;
+  --family: "DM Sans", sans-serif;
   /* ============= DISPLAY ================== */
-    /* ===============  btn padding =========== */
-  --btn-middile: 15px 24px 14px 25px;
-    --btn-big: 19px 24px 18px 25px; 
-    --btn-smole:5px 12px;
+  /* ===============  btn padding =========== */
+  --btn-middle: 10px 13px;
+  --btn-big: 19px 24px 18px 25px;
+  --btn-smole: 9px 9px;
+  --murojaat: 70px; 
+  --tableNumber: 45px;
+  --date: 15px 16px;
 }
 
 @media (max-width: 1440px) {
   :root {
-    --size13: 12px;
-  --size16: 16px;
-  --size18: 18px;
-  --size25: 22px;
-  --size30: 27px;
-  --size60: 50px;
+    --size12: 10px;
+    --size14: 12px;
+    --size16: 14px;
+    --size18: 16px;
+    --size22: 20px;
+    --size24: 22px;
+    --size34: 30px;
+    --size60: 55px;
     /* =============  ICONS width============== */
-    --icon-w18: 20px;
+    --icon-w18: 16px;
     --icon-w14: 16px;
     --icon-w12: 14px;
     --icon-w20: 22px;
-    --icon-w24: 26px;
+    --icon-w25: 25px;
     --card-img: 283px;
     /* ===============  btn padding =========== */
-    --btn-middile: 13px 22px 12px 23px;
-    --btn-big: 17px 21px 16px 22px; 
-    --btn-smole:5px 12px;
+    --btn-middle: 10px 13px;
+    --btn-big: 17px 21px 16px 22px;
+    --btn-smole: 9px 9px;
+    --murojaat: 60px;
+    --date: 14px 15px;
+
   }
 }
 
 @media (max-width: 1200px) {
   :root {
-    --size13: 12px;
+    --size10: 9px;
+    --size12: 12px;
+    --size14: 13px;
     --size16: 16px;
     --size18: 18px;
-    --size25: 22px;
-    --size30: 27px;
+    --size22: 19px;
+    --size24: 20px;
+    --size34: 30px;
     --size60: 50px;
+    --icon-w18: 16px;
   }
 }
 @media (max-width: 992px) {
   :root {
-    --size13: 11px;
-    --size15: 14px;
+    --size12: 11px;
+    --size14: 12px;
     --size16: 15px;
     --size18: 17px;
-    --size23: 21px;
+    --size22: 18px;
+    --size24: 19px;
     --size29: 27px;
-    --size32: 30px;
+    --size34: 29px;
     --size40: 35px;
 
     --card-img: 240px;
     /* =============  ICONS width============== */
-    --icon-w18: 17px;
+    --icon-w18: 16px;
     --icon-w14: 13px;
     --icon-w12: 11px;
     --icon-w20: 18px;
-    --icon-w24: 20px;
-    
+    --icon-w25: 20px;
+
     /* ===============  btn padding =========== */
-    --btn-middile: 11px 19px 10px 20px;
-    --btn-big: 15px 19px 14px 20px; 
-    --btn-smole:5px 12px;
+    --btn-middle: 9px 12px;
+    --btn-big: 15px 19px 14px 20px;
+    --btn-smole: 8px 8px;
+    --murojaat: 50px;
+    --date: 9px 13px;
   }
 }
 @media (max-width: 767px) {
   :root {
-    --size13: 9px;
-    --size15: 11px;
+    --size10: 8px;
+    --size12: 9px;
+    --size14: 11px;
     --size16: 13px;
     --size18: 14px;
-    --size23: 18px;
+    --size22: 16px;
+    --size24: 18px;
     --size29: 24px;
-    --size32: 26px;
-    --size40: 30px;
+    --size34: 26px;
+    --size40: 34px;
 
     --card-img: 200px;
     /* =============  ICONS width============== */
@@ -123,20 +157,23 @@ body {
     --icon-w14: 12px;
     --icon-w12: 10px;
     --icon-w20: 17px;
-    --icon-w24: 20px;
+    --icon-w25: 18px;
     --size40: 29px;
+    --murojaat: 40px;
   }
 }
 
 @media (max-width: 576px) {
   :root {
-    --size13: 8px;
-    --size15: 10px;
+    --size10: 7px;
+    --size12: 8px;
+    --size14: 10px;
     --size16: 11px;
     --size18: 12px;
-    --size23: 15px;
+    --size22: 14px;
+    --size24: 16px;
     --size29: 21px;
-    --size32: 23px;
+    --size34: 23px;
     --size40: 25px;
 
     /* =============  ICONS width============== */
@@ -144,6 +181,9 @@ body {
     --icon-w14: 10px;
     --icon-w12: 9px;
     --icon-w20: 15px;
-    --icon-w24: 18px;
+    --icon-w25: 16px;
+    --murojaat: 30px;
+    --icon-w18: 15px;
+
   }
 }
