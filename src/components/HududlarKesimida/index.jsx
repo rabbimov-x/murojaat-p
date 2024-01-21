@@ -5,6 +5,7 @@ import { BigContainer, HomeBody } from "./style";
 import {
   HududKartasiCard,
   HududDenamikasiTable,
+  ButtonLink,
 } from "../Generic";
 
 const Hududlarkesimida = () => {
@@ -15,6 +16,7 @@ const Hududlarkesimida = () => {
           mainTitle="Hududlar kesimida"
           pageTitle="Pages / Hududlar kesimida"
         />
+        <ButtonLink btn1 = "Yunusobod" link = "yunusobod"/>
         <HomeBody>
           <Col6 className = "hududDenamikasiTable">
             <HududKartasiCard  />

@@ -16,7 +16,7 @@ const TopMasalalar = () => {
           mainTitle="Hududlar kesimida"
           pageTitle="Pages / Hududlar kesimida tuman"
         />
-        <ButtonLink btn1 = "top masalalar" link = "hudud_kesimida/"/>
+        <ButtonLink btn1 = "top masalalar" link = "top_masalalar"/>
         <HomeBody>
           <BigTable/>
         </HomeBody>
