@@ -52,7 +52,7 @@ const DateInput = styled.input`
     background-position: left 5% top 10%;
     border-width: thin;
     position: absolute;
-    left: 5%;
+    left: 10%;
     top: 57%;
     transform: translateY(-65%);
     display: flex;
@@ -69,7 +69,7 @@ const DateInput = styled.input`
     }
     &::-webkit-datetime-edit-fields-wrapper {
     position: relative;
-    left: 15%;
+    left: 26%;
     color: #A3AED0;
     }
 `

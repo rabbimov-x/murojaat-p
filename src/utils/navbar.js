@@ -10,6 +10,7 @@ import Tashkilotlarkesimida from "../components/TashkilotlarKesimida";
 import HududlarkesimidaViloyat from "../components/HududlarKesimidaViloyat";
 import Home from "../components/Home" 
 import TopMasalalar from "../components/TopMasalalar";
+import Budget from "../components/Budget";
 
 
 export const navbar = [
@@ -19,5 +20,6 @@ export const navbar = [
     {id: useUniqueId,id2:useUniqueId, element2: <Title/>, title: "Tashkilotlar kesimida", path: "/tashkilotlar_kesimida", private : true, hiddin: false , element: <Tashkilotlarkesimida/>, icon: <Icon.Door/>}, 
     {id: useUniqueId,id2:useUniqueId, element2: <Title/>, title: "Hududlar kesimida ", path: "/hudud_kesimida/yunusobod/top_masalalar", private : true, hiddin: true , element: <HududlarkesimidaViloyat/>, icon: <Icon.Door/>}, 
     {id: useUniqueId,id2:useUniqueId, element2: <Title/>, title: "Hududlar kesimida top masalalar ", path: "hudud_kesimida/yunusobod", private : true, hiddin: true , element: <TopMasalalar/>, icon: <Icon.Door/>}, 
+    {id: useUniqueId,id2:useUniqueId, element2: <Title/>, title: "Respublika bo'yicha budget hisobi", path: "/budget", private : true, hiddin: false , element: <Budget/>, icon: <Icon.Door/>}, 
     
 ]

@@ -8,12 +8,12 @@ const Navbar = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <NavContainer width = {open}>
+    <NavContainer width = {`${open}`}>
       <ButtonContainer onClick={()=>{setOpen(!open)}}>
         {open ? <Icon.Menu></Icon.Menu> : <Icon.X></Icon.X>}
       </ButtonContainer>
       
-      <Container  justify="space-between" align="true" display = {open} pd="0">
+      <Container  justify="space-between" align="true" display = {`${open}`} pd="0">
         <Section
           onClick={() => navigate("/")}
           cursor="true"

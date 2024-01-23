@@ -1,5 +1,5 @@
 import { createStore  } from "redux";
-import { rootReduser } from "./rootReducer";
+import { rootReduser } from "./redusers/rootReduser";
 
 
 
