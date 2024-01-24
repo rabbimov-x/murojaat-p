@@ -1,4 +1,4 @@
-import React   from "react";
+import React from "react";
 import Title from "../Generic/Title";
 import { Container } from "../../globalStyled";
 import { BigContainer, HomeBody } from "./style";

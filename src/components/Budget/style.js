@@ -10,5 +10,4 @@ const HomeBody = styled.div`
   flex-wrap: wrap;
 `;
 
-
 export { BigContainer, HomeBody };

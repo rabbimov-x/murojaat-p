@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: fit-content;
-  padding: 22px 18px;
+  padding: 0px 10px;
   /* margin-top: 20px; */
   background: #ffffffcf;
   border-radius: 20px;
@@ -47,10 +47,12 @@ const Table = styled.table`
     box-sizing: border-box;
   }
 `;
-Table.Thead = styled.thead``;
+Table.Thead = styled.thead`
+  position: static;
+`;
 Table.Tbody = styled.tbody``;
 const Tr = styled.tr`
-width: max-content;
+  width: max-content;
 `;
 
 const ThThree = css`
@@ -63,6 +65,7 @@ const ThThree = css`
   text-align: center;
   color: var(--shade-0);
 `;
+
 const Th = styled.th`
   ${ThThree}
 `;
@@ -94,12 +97,12 @@ Th.Percent = styled.th`
   height: 40px;
 `;
 Th.UnitName = styled.div`
-width: fit-content;
-height: fit-content ;
+  width: fit-content;
+  height: fit-content;
   padding: 5px 10px;
   border-radius: 15px;
   color: var(--grey);
-  background-color: #F4F7FE;
+  background-color: #f4f7fe;
   border: 1px solid var(--shade-0);
   margin: 10px auto;
 `;
@@ -115,55 +118,45 @@ const TdThree = css`
 `;
 const Td = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
 `;
 Td.Number = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
 `;
 Td.District = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
+`;
+Td.DistrictTotal = styled.th`
+  ${TdThree}
+  background-color: #e1e8f0;
+  color: var(--shade-0);
+  font-weight: 700;
+  font-style: italic !important;
+`;
+Td.RegionTotal = styled.th`
+  ${TdThree}
+  background-color: #DBEAFF;
+  color: var(--shade-0);
+  font-weight: 700;
+  font-style: italic;
 `;
 Td.Region = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
+  background-color: #fff;
+  color: var(--shade-0);
+  font-weight: 700;
+  font-style: normal;
 `;
 Td.Indicator = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
 `;
 Td.Plan = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};  
-  font-style: ${({total})=> total ? "italic" : "normal"};
 `;
 Td.Fact = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
 `;
 Td.Percent = styled.th`
   ${TdThree}
-  background-color: ${({total})=> total ? "#E3E8EE" : "#fff"};
-  color: ${({total})=> total ? "var(--shade-0)" : "var(--grey)"};
-  font-style: ${({total})=> total ? "italic" : "normal"};
 `;
-
-
-
-
 
 export { Container, Card, Tr, Td, Th, Table };
