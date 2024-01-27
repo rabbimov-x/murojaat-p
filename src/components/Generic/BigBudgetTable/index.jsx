@@ -134,17 +134,14 @@ const BigBudgetTable = () => {
                       region_idex,
                       indicators,
                       district_total,
+                      region_count,
                     },
-                    index,
-                    item
+                    index
                   ) => {
                     return district_total ? (
                       <React.Fragment key={id}>
                         <Tr>
-                          <Td.DistrictTotal>
-                            <P>{Number(index) + 1}</P>
-                          </Td.DistrictTotal>
-                          <Td.DistrictTotal colSpan={3} key={region_id}>
+                          <Td.DistrictTotal colSpan={4} key={region_id}>
                             <P>{region_name}</P>
                           </Td.DistrictTotal>
                           {indicators?.map(
@@ -177,7 +174,7 @@ const BigBudgetTable = () => {
                       <React.Fragment key={id}>
                         <Tr>
                           <Td.Number>
-                            <P>{Number(index) + 1}</P>
+                            <P>{Number(index) - Number(region_count) + 1}</P>
                           </Td.Number>
                           <Td.Number>
                             <P>{Number(index) - region_idex + 1}</P>
