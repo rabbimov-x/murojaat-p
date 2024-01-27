@@ -1,19 +1,11 @@
 import dataBudget from "./by-spheres.structure.json";
-let regionId = 0;
-let regionCountValue = dataBudget.items.reduce(function (accumulator, item) {
-  if (regionId !== item.region_id) {
-    accumulator++;
-    regionId = item.region_id;
-    return accumulator;
-  }
-  return accumulator;
-}, 0);
-let regionCount = -regionCountValue;
+
 export const DataBudget = function (allData) {
   let regionId = 0;
   let firstItem = 0;
   let firstIndex = 0;
   let lastIndex = 1;
+  let regionCount = 0;
 
   const data = dataBudget.items.reduce(function (accumulator, item, index) {
     if (regionId !== item.region_id) {
@@ -29,7 +21,7 @@ export const DataBudget = function (allData) {
         district_id: item.district_id,
         district_name: item.di,
         district_total: true,
-        region_count: RegionCountAdd(),
+        region_count: regionCount++,
         indicators: item.indicators.map((item, index, array) => {
           return {
             indicator_id: item.indicator_id,
@@ -99,8 +91,3 @@ export const DataBudget = function (allData) {
   }, []);
   return data;
 };
-
-function RegionCountAdd() {
-  regionCount++;
-  return regionCount;
-}
