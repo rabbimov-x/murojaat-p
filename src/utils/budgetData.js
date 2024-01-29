@@ -61,13 +61,15 @@ export const DataBudget = function (allData) {
                 .slice(index, lastIndex)
                 .reduce(
                   (total, item) =>
-                    (total =
+                    (total = Number(
                       total +
-                      Number(
-                        item.indicators[index]?.percent
-                          ? item.indicators[index]?.percent
-                          : 0
-                      )),
+                        Number(
+                          item.indicators[index]?.percent
+                            ? item.indicators[index]?.percent
+                            : 0
+                        ).toFixed(2) /
+                          dataBudget.items.slice(index, lastIndex).length
+                    )),
                   0
                 )
             ).toFixed(2)}`,
