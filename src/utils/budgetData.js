@@ -1,10 +1,13 @@
 import dataBudget from "./by-spheres.structure.json";
 
-export const DataBudget = function (allData) {
+
+
+export const DataBudget = function () {
   let regionId = 0;
   let firstItem = 0;
   let firstIndex = 0;
   let lastIndex = 1;
+  let indexCount = -1;
   let regionCount = 0;
 
   const data = dataBudget.items.reduce(function (accumulator, item, index) {
@@ -77,15 +80,25 @@ export const DataBudget = function (allData) {
         }),
       };
       accumulator = Array.prototype.slice.call(accumulator);
-      accumulator.splice(index, 0, firstItem);
+      accumulator.splice(index, 0);
       regionId = item.region_id;
       firstIndex = index;
-      return accumulator;
+      indexCount++;
+      return [
+        ...accumulator,
+        firstItem,
+        {
+          ...item,
+          region_idex: Number(index) + indexCount,
+          region_count: regionCount,
+        },
+      ];
+
     } else {
       accumulator = Array.prototype.slice.call(accumulator);
       accumulator.push({
         ...item,
-        region_idex: Number(firstIndex) + 1,
+        region_idex: Number(firstIndex) + indexCount,
         region_count: regionCount,
       });
       return accumulator;

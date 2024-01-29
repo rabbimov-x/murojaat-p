@@ -12,6 +12,9 @@ const BigBudgetTable = () => {
       <Card>
         <Card.Body>
           <Card.Section>
+            <div>
+              {budgetData.items[7].indicators.length}
+            </div>
             <Table>
               <Table.Thead>
                 <Tr>
@@ -177,7 +180,7 @@ const BigBudgetTable = () => {
                             <P>{Number(index) - Number(region_count) + 1}</P>
                           </Td.Number>
                           <Td.Number>
-                            <P>{Number(index) - region_idex + 1}</P>
+                            <P>{Number(index) - region_idex }</P>
                           </Td.Number>
                           <Td.Region key={region_id}>
                             <P>{region_name}</P>
@@ -191,7 +194,7 @@ const BigBudgetTable = () => {
                               plan,
                               fact,
                               percent,
-                            }) => {
+                            }, index) => {
                               return (
                                 <React.Fragment key={kpi_hakim_indicator_id}>
                                   <Td.Percent key={kpi_hakim_indicator_id}>

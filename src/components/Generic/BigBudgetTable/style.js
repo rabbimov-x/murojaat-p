@@ -36,7 +36,7 @@ Card.Section = styled.div`
 `;
 
 const Table = styled.table`
-  width: 14000px;
+  /* min-width: 14000px; */
   border-collapse: collapse;
   border-spacing: 0;
   border-radius: 12px;
@@ -57,7 +57,7 @@ const Tr = styled.tr`
 
 const ThThree = css`
   padding: 10px;
-  height: 40px;
+  height: 30px;
   background: #f5f5f9;
   border-width: 1px 1px 1px 0px;
   border-style: solid;
@@ -82,7 +82,8 @@ Th.Region = styled.th`
 `;
 Th.Indicator = styled.th`
   ${ThThree}
-  height: 60px;
+  height: 30px;
+  min-width: 300px;
 `;
 Th.Plan = styled.th`
   ${ThThree}
