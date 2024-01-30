@@ -61,10 +61,10 @@ const DistrictTr = ({ indicatorLists, extractData }) => {
                                 item.reduce(
                                   (total, item) =>
                                     (total =
-                                      parseFloat(
+                                      Number(
                                         total * 100 +
                                           100 *
-                                            parseFloat(
+                                            Number(
                                               item.indicators[index]?.fact
                                                 ? item.indicators[index]?.fact
                                                 : 0

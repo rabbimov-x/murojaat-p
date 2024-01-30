@@ -1,10 +1,7 @@
-// import dataBudget from "./by-spheres.json";
 import structure from "./structure.json";
 
-// console.log(dataBudget.items);
-console.log(structure.items);
 export const IndicatorList = function () {
-  const newData = [...structure.items];
+  const newData = [...structure];
   const data = newData?.reduce((accumulator, obj) => {
     let find = [...accumulator, ...obj.indicators].reduce(
       (accumulator, obj) => {
@@ -23,11 +20,10 @@ export const IndicatorList = function () {
   }, []);
   return data;
 };
-console.log(IndicatorList());
 
 export const fixIndicatorList = function () {
   const IndicatorListData = IndicatorList();
-  const newData = Array.apply(null, structure.items);
+  const newData = Array.apply(null, structure);
 
   const data = newData.reduce((accumulator, itemObj, index) => {
     let fix = IndicatorListData.reduce((accumulatorIn, objIn) => {
@@ -48,11 +44,10 @@ export const fixIndicatorList = function () {
   }, []);
   return data;
 };
-console.log(fixIndicatorList());
 
 const regionIds = Array.from(
   new Set(
-    structure.items.map((item) => {
+    structure.map((item) => {
       return item.region_id;
     })
   )

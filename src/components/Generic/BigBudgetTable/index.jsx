@@ -17,7 +17,6 @@ const BigBudgetTable = () => {
       <Card>
         <Card.Body>
           <Card.Section>
-            <div>{indicatorLists.length}</div>
             <Table>
               <Table.Thead>
                 <Tr>
