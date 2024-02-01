@@ -46,7 +46,7 @@ const RegionTr = ({ indicatorLists, fixIndicators }) => {
                             0
                           )
                         ).toFixed(2) / fixIndicators.length
-                      ).toFixed(1))}
+                      ).toFixed(2))}
                 </P>
               </Td.RegionTotal>
               <Td.RegionTotal>
@@ -86,12 +86,12 @@ const RegionTr = ({ indicatorLists, fixIndicators }) => {
                 <P>
                   {Number(plan) !== 0
                     ? indicator_type === 0
-                      ? ((fact / Number(plan)) * 100).toFixed(1) >= 100
+                      ? ((fact / Number(plan)) * 100).toFixed(2) >= 100
                         ? "100"
-                        : ((Number(fact) / Number(plan)) * 100).toFixed(1)
-                      : (100 * (1 + (1 - (fact / plan) * 1))).toFixed(1) >= 100
+                        : ((Number(fact) / Number(plan)) * 100).toFixed(2)
+                      : (100 * (1 + (1 - (fact / plan) * 1))).toFixed(2) >= 100
                       ? "100"
-                      : ((Number(fact) / Number(plan)) * 100).toFixed(1)
+                      : ((Number(fact) / Number(plan)) * 100).toFixed(2)
                     : ""}
                 </P>
               </Td.RegionTotal>

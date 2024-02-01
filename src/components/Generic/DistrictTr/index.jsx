@@ -104,14 +104,14 @@ const DistrictTr = ({ indicatorLists, extractData }) => {
                                   : (
                                       (Number(fact) / Number(plan)) *
                                       100
-                                    ).toFixed(1)
+                                    ).toFixed(2)
                                 : (
                                     100 *
                                     (1 +
                                       (1 - (Number(fact) / Number(plan)) * 1))
                                   ).toFixed(1)) >= 100
                               ? "100"
-                              : ((Number(fact) / Number(plan)) * 100).toFixed(1)
+                              : ((Number(fact) / Number(plan)) * 100).toFixed(2)
                             : "0"}
                         </P>
                       </Td.DistrictTotal>
