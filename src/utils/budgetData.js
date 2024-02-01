@@ -9,7 +9,7 @@ export const IndicatorList = function () {
           (item) => item.indicator_id === obj.indicator_id
         );
         if (!existingObj) {
-          accumulator.push(obj);
+          accumulator.push({...obj, plan : "", fact: "", percent: ""});
         }
         return accumulator;
       },

@@ -130,6 +130,7 @@ const DistrictTr = ({ indicatorLists, extractData }) => {
                   district_name,
                   indicators,
                   index_count,
+                  
                 },
                 index
               ) => {
@@ -149,7 +150,7 @@ const DistrictTr = ({ indicatorLists, extractData }) => {
                         <P>{district_name}</P>
                       </Td.District>
                       {indicators?.map(
-                        ({ kpi_hakim_indicator_id, plan, fact, percent }) => {
+                        ({ kpi_hakim_indicator_id, plan, fact, percent, indicator_id, }) => {
                           return (
                             <React.Fragment key={kpi_hakim_indicator_id}>
                               <Td.Percent key={kpi_hakim_indicator_id}>
